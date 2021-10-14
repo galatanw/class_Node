@@ -1,0 +1,22 @@
+[
+{
+    "model":"toyota",
+    "year":2000,
+    "price":2000
+},
+{
+    "model":"mercedes",
+    "year":2111,
+    "price":5000
+},
+{
+    "model":"tesla",
+    "year":2200,
+    "price":1000
+},
+{
+    "model":"hyundai",
+    "year":2010,
+    "price":3000
+}
+]
