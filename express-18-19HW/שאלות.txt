@@ -1,0 +1,12 @@
+1.כתוב שרת node שמאזין
+ על port 8080 ומחזיר לדפדפן קובץ index.html אם פונים אליו עם localhost:8080
+ ומחזיר קובץ about.html אם פונים אליו עם localhost:8080/about.html. בקובץ
+ index.html הכנס אלמנט h1  עם הטקסט index . בקובץ about.html
+ הכנס אלמנט h1  עם הטקסט about. לכל קובץ html 
+הוסף לינקים שיאפשרו לעבור לדפים האחרים. לדוגמא מדף Index אפשר יהיה לעבור לדף 
+about ומדף about אפשר יהיה לעבור לדף index
+
+2.הרחב את web_server_1.5 כך שהאתר יכיל גם את הדפים הבאים : contact 
+, courses
+ , mentoring ,testimonials , events 
+בדיוק כמו שהוספתם את הדפים index,about בתרגיל הקודם
