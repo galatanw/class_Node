@@ -1,0 +1,34 @@
+1ץמה מייצג המשתנה __dirname בקובץ https://github.com/NathanKr/express-playground/blob/master/express_static_files/src/server.js
+1.תשובה:
+dirname מסמל את PATH הקובץ (נתיב הקובץ מהדיסק)
+
+2.למה משמש path.join בקובץ https://github.com/NathanKr/express-playground/blob/master/express_static_files/src/server.js
+2.תשובה:
+השימוש בPATH.JOIN בקובץ הוא לצורך יצירת הנתיב לתיקייה הPublic המכילה בתוכה את קבצי האתר .
+3."הורד לדיסק את הקוד שנמצא תחת https://github.com/NathanKr/express-playground/tree/master/express_static_files 
+והרץ את server.js
+א. פתח את הדפדפן בכתובת http://localhost:8080/ ולחץ על F12 ואחר כך על הטאב networks ואז בדוק אילו קבצים השרת מוריד לקלינט, האם יש קשר בין הקבצים האלה לקבצים שיש בספרית public
+ב. איך מחליט השרת אילו קבצים להוריד לקליינט
+ג. מה צריך לעשות על מנת שכל הקבצים של הקליינט יהיו תחת ספרית public1 ולא תחת ספרית public והאתר יתפקד תקין
+ד. מה צריך לעשות על מנת שקבצי התמונה יהיה תחת ספריה img במקום images והאתר יתפקד תקין
+ה. מה צריך לעשות על מנת שקבצי הcss יהיה תחת ספריה styles במקום css והאתר יתפקד תקין
+"
+3.תשובה:
+א- הקשר בין הקבצים אשר יורדו בעת טעינת האינדקס לבין השמות בתקיית הPublic קשורים הרי הם אותם הקבצים .
+ב. השרת מחליט על פי הURL שהוא מקבל במידה והוא תואם לאחד מקבצי הHTML או לקישורים היוצאים מהם הוא יוריד אותו.
+
+ג- דרך ההגעה של מודל האקספרס לתקייה מתבצעת דרך PATH.JOIN סובייקטיבת בשרת זה צריך לשנות את הסטרינג public שבותוכו לPublic1 (הכוונה משתנה 
+publicPath) המשתמש במודל הPATH.JOUN
+
+ד.הקישור לקבצים חיצוניים לאתר מצד השרת נעשה על ידי שימוש ברוט של הHTML עצמו כלומר מתבצע קישור מהאתר לתמונה בPath רלטיבי לקובץ ובמידה והPath תקין ותקיית האב היא הPUBLIC הקובץ ימצא וירד לאתר דרך הכתיבה היא 
+<img src="img/greece-4405371__340.jpg" alt="greece">
+
+5.הפעולה היא אותה פעולה צריך לשנות את הPATH בHTML כך שיהיה תקין
+    <link rel="stylesheet" href="styles/styles.css">
+
+
+
+
+4."The root argument specifies the root directory from which to serve static assets. The function determines the file to serve by combining req.url with the provided root directory. When a file is not found, instead of sending a 404 response, it instead calls next() to move on to the next middleware, allowing for stacking and fall-backs."
+from: http://expressjs.com/en/5x/api.html#express.static
+express.static: section

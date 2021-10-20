@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ------NAV--- */
+header{
+    width: 100%;
+    height: 10vh;
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+#logo{
+    font-family: 'IM Fell English SC', serif;
+}
+#topNavUl{
+    list-style-type: none;
+}
+#topNavUl li{
+    display: inline-block;
+    padding: 0 2vw ;
+}
+#topNavUl li a{
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    font-size: xx-large;
+    font-family: 'IM Fell English SC', serif;
+    transition: all 0.3s ease;
+}
+#topNavUl li a:hover{
+    color: red;
+}
+#topNavBtn button{
+    background-color: rgb(73, 171, 209);
+    font-family: 'IM Fell English SC', serif;
+    font-size: medium;
+    padding: 0 2vw; ;
+    margin-right: 4vh;
+    border: none;
+    border-radius: 50px;
+    transition: all 1s ease;
+}
+#topNavBtn{
+    padding: 1vw 0 0 0 ;
+
+}
+
+#topNavBtn button:hover{
+    background-color: rgb(73, 171, 209,0.8);;
+}
+#firstName{
+    color: rgb(42, 114, 209);
+}
+#lastName{
+    color: white;
+}
+/* ---------main------- */
+
+
+/* --background */
+#mainBack{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    }
+    
+/* ---info--- */
+#info{
+    height: 15vh;
+    width: 100%;
+    background-color:  black;
+    position: relative;
+    overflow: hidden;
+}
+#play{
+    background: red;
+}
+#infoText{
+    position: absolute;
+    color: white;
+}
+.infoTextAnimation{
+    animation: carouselleText 10s infinite  linear;
+}
+@keyframes carouselleText {
+    0%{
+        left: -40%;
+    }
+    10%{
+        left: 0%;
+    }
+    100%{left:100%}
+}
+/* ---content--- */
+
+#content{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+#content h1{
+    color: white;
+    font-size: 400%;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/*-------------------------------- ---FOOTER--- */
+footer{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    width: 100%;
+    /* height: 10vh; */
+}
+/* --------info-------- */
+footer h5{
+    color: white;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+#rights{
+    align-self: center;
+
+}
+/* ------------icons--------- */
+#socialIcons{
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#socialIcons a{
+width: 10%;
+}
+#socialIcons a:hover{
+    opacity: 0.8;    
+}
+#socialIcons img{
+    width: 100%;
+    }
