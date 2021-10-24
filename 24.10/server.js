@@ -23,6 +23,6 @@ let acceptedStatus=[];
 let unacceptedStatuse=[]
 userDom.sorted(acceptedStatus,unacceptedStatuse,userDom.data)
 
-res.render('main',{accepted:acceptedStatus,unaccepted:unacceptedStatuse})
+res.render('content',{accepted:acceptedStatus,unaccepted:unacceptedStatuse})
 })
 app.listen(port,()=>{`listening to ${port}`})

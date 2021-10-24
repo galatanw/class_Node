@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     {{{body}}}
+    <script>
+            const infoTextAnimation =document.getElementById('infoText')
+    const playPause =document.getElementById('play')
+    function play(){
+        if(infoTextAnimation.className==''){
+            infoTextAnimation.className="infoTextAnimation"
+            playPause.innerHTML='⏸'
+            return
+        }
+        playPause.innerHTML='▶'
+        infoTextAnimation.className=""
+        
+
+    }
+    </script>
 </body>
 </html>
