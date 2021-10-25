@@ -31,11 +31,12 @@ function functions(data) {
                 counter++
             }
             const user = {
-                id: process.argv[3],
+                id: Number(process.argv[3]),
                 name: process.argv[4],
                 isComplited: "",
-                Date: new Date,
+                date: new Date().toDateString(),
             }
+            console.log('user');
             if (process.argv[5] == 'true') {
                 user.isComplited = true
             }
@@ -70,7 +71,7 @@ function functions(data) {
                         iterator.date = process.argv[6]
                     }
                     else {
-                        iterator.date = new Date()
+                        iterator.date = new Date().toDateString()
 
                     }
                     if (process.argv[5] == 'true') {

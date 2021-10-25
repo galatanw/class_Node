@@ -13,7 +13,7 @@ catch (err) { console.log('error users file'); }
 const sorted = function sort(TRUESTATUSE, FALSESTATUSE,dat) {
   for (const iterator of dat) {
     if (iterator.isCompleted == true) { TRUESTATUSE.push(iterator) }
-    else { FALSESTATUSE.push(iterator) }
+    else { FALSESTATUSE.push(iterator);  }
   }
 }
 

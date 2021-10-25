@@ -1,34 +1,10 @@
-    <div id="info">
-        <article>
-            <button onclick="play()" id="play">⏸</button>
-        </article>
-        <article id="infoText" class="infoTextAnimation">
-            <h3> 
-                GAL ATANW , software developer
-            </h3>
-            <h3>businnes.galatanw@gmail.com</h3>
-            <!-- <h3>{{date}}</h3> -->
-        </article>
-    </div>
-    <div id="content">
-        <img id="mainBack" src='./images/index/indexContentBack.jpg'>
-        <h1>Hi <br>my name is Gal Atanw<br>and I'm a software developer in the making   </h1>
-    </div>
-<div>
-<section>
-<h1 id="title">
-    here you will see all the accepted
-</h1>
-<ul>
-{{>accepted}}
-</ul>
-</section>
-<section>
-<h1 id="title">
-    if you are not accepted
-</h1>
-<ul>
-{{>unaccepted}}
-</ul>
-</section>
-</div>
+
+{{#if home}}
+<div>{{>home}}</div>
+{{/if}}
+{{#if sorted}}
+{{>Sorted}}
+{{/if}}
+{{#if crud}}
+{{>crud}}
+{{/if}}

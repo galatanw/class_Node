@@ -1,0 +1,48 @@
+
+<div id="sorted">
+<h1>our user data sorted by complete and not complete tasks</h1>
+<section>
+<h1 id="title">
+    tasks that completed
+</h1>
+
+<table id="sortTable"> 
+<tr>
+    <td>name</td>
+    <td>ID</td>
+    <td>last update</td>
+</tr> 
+    {{#each accepted}}
+<tr>
+<td>{{this.name}}</td>
+<td>{{this.id}} </td>
+<td> {{this.date}}</td>
+</tr>
+</table >
+<ul>
+<li>
+</li>
+{{/each}}
+</ul>
+</section>
+<section>
+<h1 id="title">
+        tasks that didn't completed
+
+</h1>
+<table id="sortTable">
+    <tr>
+    <td>name</td>
+    <td>ID</td>
+    <td>last update</td>
+</tr> 
+    {{#each unaccepted}}
+<tr>
+<td>{{this.name}}</td>
+<td>{{this.id}} </td>
+<td>{{this.date}}</td>
+</tr>
+{{/each}}
+</table>
+</section>
+</div>

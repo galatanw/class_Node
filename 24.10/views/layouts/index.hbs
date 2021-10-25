@@ -6,14 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    {{#if crud}}
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+
+        h1{
+    max-height: 10vh;
+    overflow: hidden;
+    }
+   
+
+ #crudBtn{
+    width: 25vw;
+    height:25vw;
+    margin: 3vw;
+    transition: all 1s;;
+    border-radius: 50%;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #2f2f2f;
+    font-size: 0;
+    line-height: 0;
+    float: left;
+    }
+     #crudBtn:hover{
+    color: white;
+    font-size: xx-large;
+    font-family: fantasy;
+    background-color: brown;
+     }
+
+    </style>
+    {{/if}}
 </head>
 <body>
     {{{body}}}
+    {{#if home}}
     <script>
             const infoTextAnimation =document.getElementById('infoText')
-    const playPause =document.getElementById('play')
-    function play(){
-        if(infoTextAnimation.className==''){
+             const playPause =document.getElementById('play')
+            function play(){
+               if(infoTextAnimation.className==''){
             infoTextAnimation.className="infoTextAnimation"
             playPause.innerHTML='⏸'
             return
@@ -24,5 +57,9 @@
 
     }
     </script>
+    {{/if}}
+    {{#if crud}}
+    <script src="./js/crud.js"></script>
+    {{/if}}
 </body>
 </html>
