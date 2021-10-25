@@ -11,8 +11,8 @@ case 'create':
         <input type="text" name="name" placeholder="name.."><br>
         <label for="completd Status">completd Status</label><br>
         <select name="status">
-            <option value="true">true</option>
-            <option value="false">false</option>
+        <option value="false">false</option>
+        <option value="true">true</option>
         </select><br>
         <input type="submit" value="ok">
         `
@@ -28,8 +28,8 @@ case 'update':
         <input type="date" name="date" placeholder="date.." title:"not optional"><br>
         <label for="completd Status">completd Status</label><br>
         <select name="status">
-            <option value="true">true</option>
-            <option value="false">false</option>
+        <option value="false">false</option>
+        <option value="true">true</option>
         </select><br>
         <input type="submit" value="ok">
         `

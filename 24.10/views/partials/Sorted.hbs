@@ -11,18 +11,18 @@
     <td>name</td>
     <td>ID</td>
     <td>last update</td>
+    <td> status</td>
+
 </tr> 
     {{#each accepted}}
 <tr>
 <td>{{this.name}}</td>
 <td>{{this.id}} </td>
 <td> {{this.date}}</td>
+<td> {{this.isCompleted}}</td>
 </tr>
-</table >
-<ul>
-<li>
-</li>
 {{/each}}
+</table >
 </ul>
 </section>
 <section>
@@ -35,12 +35,16 @@
     <td>name</td>
     <td>ID</td>
     <td>last update</td>
+    <td> status</td>
+
 </tr> 
     {{#each unaccepted}}
 <tr>
 <td>{{this.name}}</td>
 <td>{{this.id}} </td>
 <td>{{this.date}}</td>
+<td> {{this.isCompleted}}</td>
+
 </tr>
 {{/each}}
 </table>
