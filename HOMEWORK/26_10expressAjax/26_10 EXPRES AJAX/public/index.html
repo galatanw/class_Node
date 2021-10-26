@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <style>h1{display: inline-block;}</style>
+</head>
+<body>
+    <form id="form" action="/home" method="get">
+        <input id="city" type="text" name="city" placeholder="city" required>
+        <input type="submit" value="find city">
+    </form>
+    <script>
+        const city=document.getElementById('city')
+        const myForm= document.getElementById('form')
+        form.addEventListener("submit",(e)=>{
+            if(city.value[0]==" "){
+                e.preventDefault()
+            alert('spaces as a first charecter is not allowed')
+        }})
+    </script>
+</body>
+</html>
