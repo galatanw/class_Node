@@ -87,7 +87,7 @@ case "POST":
                console.log(data);
                 })
     .catch((err)=>{
-        dataForm.innerHTML = ""
+    dataForm.reset()
         alert(err)
     })
 break
@@ -119,7 +119,7 @@ case "DELETE":
 
     })
 .catch((err)=>{
-    dataForm.innerHTML = ""
+    dataForm.reset()
     alert(err)
 })
  break
@@ -151,7 +151,7 @@ console.log(data);
      
 })
 .catch((err)=>{
-    dataForm.innerHTML = ""
+    dataForm.reset()
     alert(err)
 }
 )
@@ -184,7 +184,7 @@ default:
 
 })
 .catch((err)=>{
-    dataForm.innerHTML = ""
+    dataForm.reset()
     alert(err)
 
 })
@@ -208,9 +208,9 @@ function GetFullData() {
         <td>located</td>
         <td>name</td>
         <td>message</td>
-        <td>email</td>
         <td>id</td>
-    </tr>
+        <td>email</td>
+        </tr>
         `
 
             for (const iterator of response.data) {
@@ -227,6 +227,7 @@ function GetFullData() {
         }
         )
         .catch((err) => {
+            
             dataForm.innerHTML = ""
             alert(err);
 

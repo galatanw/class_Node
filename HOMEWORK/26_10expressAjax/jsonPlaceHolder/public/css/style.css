@@ -4,11 +4,39 @@
     padding: 0;
 }
 body{
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
+}
+main{
+    width: 50%;
+    margin-left:25% ;
+    margin-right:25% ;
 }
 #fileData , #fileData td{
 border: 1px solid black;
 }
+#fileData td{
+
+    background-color: rosybrown;
+    transition: all 1s;
+}
+#fileData  {
+width: 100%;
+
+}
+#fileData tr {
+    background-color: #464A52;
+           box-shadow: 0 6px 6px -6px #0E1119;
+}
+           #fileData td:hover{
+    transform: translate3d(4px, -6px, 0);
+    box-shadow: -1px 1px  red , -2px 2px  red ,-3px 3px  red , -4px 4px  red , -5px 5px  red ,-6px 6px  red;
+}
 #responseTable,#responseTable td{
     border: 1px solid red;
+
 }
+
+
