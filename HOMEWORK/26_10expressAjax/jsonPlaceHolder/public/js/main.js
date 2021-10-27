@@ -205,22 +205,22 @@ function GetFullData() {
             console.log(response.data);
             preview.innerHTML = `
         <tr>
-        <td>located</td>
-        <td>name</td>
-        <td>message</td>
-        <td>id</td>
-        <td>email</td>
+        <td><h3>located</h3></td>
+        <td><h3>name</h3></td>
+        <td><h3>message</h3></td>
+        <td><h3>id</h3></td>
+        <td><h3>email</h3></td>
         </tr>
         `
 
             for (const iterator of response.data) {
                 preview.innerHTML += `
             <tr>
-            <td>row:${iterator.location}</td>
-            <td>${iterator.name}</td>
-            <td>${iterator.message}</td>
-            <td>${iterator.email}</td>
-            <td>${iterator.id}</td>
+            <td class="dataRow">row:${iterator.location}</td>
+            <td class="dataRow">${iterator.name}</td>
+            <td class="dataRow">${iterator.message}</td>
+            <td class="dataRow">${iterator.email}</td>
+            <td class="dataRow">${iterator.id}</td>
             </tr>
         `
             }
