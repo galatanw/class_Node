@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+#fileData , #fileData td{
+border: 1px solid black;
+}
+#responseTable,#responseTable td{
+    border: 1px solid red;
+}

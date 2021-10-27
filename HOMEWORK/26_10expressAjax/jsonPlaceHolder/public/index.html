@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form id="dataForm" class="method">
+    </form>
+    <form>
+        <label for="options">CHOOSE ACT</label><br>
+        <select name="" id="options" >
+            <option value="NUN">OPTIONS</option>
+            <option value="POST">ADD</option>
+            <option value="DELETE">DELETE</option>
+            <option value="GET">SEARCH</option>
+            <option value="PATCH">EDIT</option>
+        </select>
+    </form>
+    <table id="responseTable">
+    </table>
+    <table id="fileData">
+        <tr>
+            <td>located</td>
+            <td>name</td>
+            <td>message</td>
+            <td>email</td>
+            <td>id</td>
+        </tr>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="./js/main.js"></script> 
+</body>
+</html>

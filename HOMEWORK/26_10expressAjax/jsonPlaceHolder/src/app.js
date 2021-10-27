@@ -26,8 +26,10 @@ app.get('/comments/:id',(req,res)=>{
 app.post('/comments',(req,res)=>{
 const tasksArray=JSON.parse(fs.readFileSync(`${tasksArrayLocation}`,'utf8'))
 let freeId=0
+let location=1
 if(tasksArray.length>=1){
 freeId=(tasksArray[tasksArray.length-1].id+1)
+location=tasksArray[tasksArray.length-1].location+1
 }    
 const name=req.body.name
     const email=req.body.email
@@ -40,7 +42,7 @@ const name=req.body.name
         res.sendStatus(401)
     }
     
-    const task={name:name,message:message,email:email,id:freeId}
+    const task={name:name,message:message,email:email,id:freeId,location:location}
     tasksArray.push(task)
     freeId++
     res.send(task)
@@ -51,13 +53,12 @@ app.delete('/comments/:id',(req,res)=>{
 const tasksArray=JSON.parse(fs.readFileSync(`${tasksArrayLocation}`,'utf8'))
 const id=req.params.id 
     const task=tasksArray.findIndex((item)=>item.id==id)
-    console.log(task);
-        if(task && task!=-1){
+        if(task!=-1){
             const deleted= tasksArray.splice(task,1)
                 for (let index = task; index < tasksArray.length; index++) {
-                            tasksArray[index].id--
+                            tasksArray[index].location--
                 }
-               res.send([tasksArray,deleted])
+               res.send(deleted)
                fs.writeFileSync(`${tasksArrayLocation}`,JSON.stringify(tasksArray))
                return
             }
@@ -68,12 +69,12 @@ const id=req.params.id
 app.patch('/comments/:id',(req,res)=>{
 const tasksArray=JSON.parse(fs.readFileSync(`${tasksArrayLocation}`,'utf8'))
 if(tasksArray.length<1){
-    res.statusCode(404)
+    res.statusCode(401)
     return
 }
     const id=req.params.id
     const taskLocation=tasksArray.findIndex((item)=>item.id==id)
-    if(taskLocation){
+    if(taskLocation!=-1){
         const name=req.body.name
         const email=req.body.email
         const emailSign=/@/g    
