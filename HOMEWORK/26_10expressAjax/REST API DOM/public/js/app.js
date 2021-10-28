@@ -23,11 +23,11 @@ options.addEventListener("change", () => {
         <input  type="submit" id="start">
             
                 `
-            break
+        break
         case "DELETE":
             responseTable.innerHTML = ""
             dataForm.innerHTML =
-                ` <label for="options">DELETE BY ID</label><br>
+            ` <label for="options">DELETE BY ID</label><br>
             <input required type="number" class="method" placeholder="ID..">
             <input  type="submit" id="start">`
             break;
@@ -188,7 +188,7 @@ default:
     alert(err)
 
 })
-break;
+break
 }
     GetFullData()
 })
@@ -202,7 +202,6 @@ function GetFullData() {
     axios
         .get("/comments")
         .then((response) => {
-            console.log(response.data);
             preview.innerHTML = `
         <tr>
         <td><h3>located</h3></td>
