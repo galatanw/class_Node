@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        let videoSrc="https://player.vimeo.com/external/629172467.hd.mp4?s=e71b1315dd040782d33db8e5e68055c645a1f4a2&profile_id=170";
+        let imageSrc="https://cdn.pixabay.com/photo/2021/11/05/20/41/woman-6771981__340.jpg";
+     
+     
+        function Image(props){
+            return(
+                <img src={props.imageSrc} height="400px"width="400px"/>)
+        }
+        function Video(props){
+            return(
+                <video src={props.videoSrc} height="400px"width="400px" controls></video>)}
+        function Media(props){
+            return(
+                <div>
+                    <Image imageSrc={props.imageSrc}/> 
+                    <Video videoSrc={props.videoSrc}/>
+                </div>
+            )
+        }
+
+                
+        const container=document.getElementById("container")
+        ReactDOM.render(
+            <Media videoSrc={videoSrc} imageSrc={imageSrc} /> ,container
+        )
+    </script>
+
+</body>
+</html>

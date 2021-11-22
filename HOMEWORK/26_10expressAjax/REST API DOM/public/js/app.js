@@ -171,11 +171,11 @@ default:
         <td>id</td>
         </tr>
          <tr>
-        <td>row:${data.data[0].location}</td>
-        <td>${data.data[0].name}</td>
-        <td>${data.data[0].message}</td>
-        <td>${data.data[0].email}</td>
-        <td>${data.data[0].id}</td>
+        <td>row:${data.data.location}</td>
+        <td>${data.data.name}</td>
+        <td>${data.data.message}</td>
+        <td>${data.data.email}</td>
+        <td>${data.data.id}</td>
         </tr>
       `
         

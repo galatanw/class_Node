@@ -1,0 +1,8 @@
+.foodExamples{
+    display: flex;
+    padding: 2vh;
+    flex-direction: row;
+}
+.foodExamplex .foodExample{
+    width: 33%;
+}

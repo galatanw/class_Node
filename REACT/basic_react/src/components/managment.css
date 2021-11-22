@@ -1,0 +1,16 @@
+.managerWrapper{
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
+    column-gap: 10px;
+}
+.managerWrapper .manager{
+    width: 33%;
+}
+.managerWrapper .manager:first-child{
+    margin-left: 5%;
+}
+.managerWrapper  .manager:last-child{
+    margin-right: 5%;
+
+}

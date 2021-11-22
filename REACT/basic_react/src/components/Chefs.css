@@ -1,0 +1,9 @@
+.chefsWrapper{
+    padding: 4vh;
+    display: flex;
+    flex-flow: row;
+    background-color: rgb(172, 131, 102);
+}
+.chefsWrapper .chef{
+    width: 33%;
+}

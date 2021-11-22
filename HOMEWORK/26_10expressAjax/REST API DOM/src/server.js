@@ -108,7 +108,9 @@ try{
     tasksArray[taskLocation].name=name
     tasksArray[taskLocation].email=email
     tasksArray[taskLocation].message=message
-    res.send(tasksArray)
+    const requestedTask=tasksArray[taskLocation]
+    console.log(requestedTask);
+    res.send(requestedTask)
     fs.writeFileSync(`${tasksArrayLocation}`,JSON.stringify(tasksArray)) 
     return
 }

@@ -1,0 +1,9 @@
+.foodExample{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.foodExample img{
+    width: 100%;
+}

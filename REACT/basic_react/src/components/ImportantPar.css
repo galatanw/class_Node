@@ -1,0 +1,10 @@
+.ImportantPar {
+    display: inline;
+    text-align: center;
+}
+.ImportantPar h1{
+    color: red;
+}
+.ImportantPar P{
+    font-weight: 800;
+}

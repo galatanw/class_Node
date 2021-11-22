@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <main id="app"></main>
+    <script type="text/babel">
+        const app=document.getElementById("app")
+        const string="hello world"
+        const number=20
+        const bollean=true
+        const array=[1,2,3]
+        const imgUrl="https://cdn.pixabay.com/photo/2021/11/11/16/29/tree-6786654_960_720.jpg"
+        const obj={name:"gal"}
+function DynamicAlert(props){
+
+function alertTxt() {
+    alert(props.txt)
+}
+return(
+    <button onClick={alertTxt}>&copy;  tryDynamic </button>
+)
+}
+function Img(props) {
+    console.log(props);
+    const AlertYear=()=> {
+        console.log(new Date().getFullYear())
+        alert(props.moti)
+    }
+return(
+    <img onClick={AlertYear} src={props.imgSrc} height="200px" width="300px"></img>
+)
+}
+
+        ReactDOM.render(
+            <div><h1>{string+" "+ (number+10)+" "+bollean+" "+array+" "+obj.name} </h1>
+                <Img imgSrc={imgUrl} moti={"moti"}/>
+                <DynamicAlert txt={string} />
+                    <footer></footer>
+                </div>,app)
+    
+</script>
+</body>
+</html>

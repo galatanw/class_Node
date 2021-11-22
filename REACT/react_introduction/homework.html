@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        const container=document.getElementById("container")
+    // create a componente with the title hello
+    
+    const head=  document.getElementById("head")    
+        function Title() {
+          return( <div> <title> hello</title> <Name/></div>)
+        
+        }
+        ReactDOM.render(<Title/>,container)
+
+    // create a componente that displays the car object
+    // function Car(){
+    //     const car=
+    //     {model:"car",
+    //     picture:["https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278__340.jpg"]}
+        
+    //     return(
+    //         <div>            
+    //         <p>{car.model}</p>
+    //         <img height="400px" width="400px" src={car.picture[0]}></img>
+    //     </div>)
+
+    // }
+    // // ReactDOM.render( <Car/>,container)
+    // // repeat it 10 times
+    // ReactDOM.render(<div> <Car/> <Car/> <Car/> <Car/> <Car/> <Car/> <Car/> <Car/> <Car/> <Car/> </div> ,container)
+
+
+
+function Name(){return (<h1>Gal Atanw</h1>)}
+// ReactDOM.render(<div><Name/></div>,container)
+
+
+
+
+</script>
+</body>
+</html>
