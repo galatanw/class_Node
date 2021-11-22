@@ -1,18 +1,13 @@
 import './App.css';
-import Counter from './counter/counter';
-import TwoCounters from './counter/TwoCounters';
-import Input from './input/Input';
-import SmartCounter from './smartCounter/smartCounter';
-import ToggleColor from './ToggleColor/ToggleColor';
+import TwoCounters from './homework/reacrState3';
+import Counter from './homework/reactState1';
+import SmartCounter from './homework/reactState2';
+import ChangeclrBtLng from './homework/reactStyling';
+import DisplayTxt from './homework/reactStyling2';
 
 function App() {
   return (
     <div>
-      {/* <Counter/> */}
-      {/* <TwoCounters/> */}
-    {/* <SmartCounter counter={20}/> */}
-    <ToggleColor text={"hey hey hey"}/>
-    <Input/>
     </div>
   );
 }
