@@ -7,7 +7,7 @@ export default class DisplayTxt extends Component {
     render() {
         return (
             <div>
-               <button onClick={this.show}>{this.state.show}</button> 
+               <button onClick={this.show}>display:{this.state.show}</button> 
                 <p style={{display:this.state.show}}>{this.props.text}</p>
             </div>
         )
