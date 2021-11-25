@@ -1,0 +1,11 @@
+.image, img {
+  width: 20vw;
+  height: 20vh;
+}
+
+.titles, h1 h4 {
+  font-weight: 900;
+  color: #1f1919;
+  font-family: serif;
+}
+/*# sourceMappingURL=car.css.map */

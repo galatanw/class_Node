@@ -1,0 +1,22 @@
+.image{
+    width: 20vw;
+    height: 20vh;
+}
+@mixin border-radius ($radius){
+    border-radius: $radius;
+    -ms-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+.titles{
+    font-weight: 900;
+    color: rgb(31, 25, 25);
+    font-family: serif;
+
+}
+img{
+    @extend .image;
+}
+h1 h4{
+    @extend .titles
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,EAgBN,GAAG,CAhBG;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf;;AAOD,AAAA,OAAO,EASP,EAAE,CAAC,EAAE,CATE;EACH,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,OAAe;EACtB,WAAW,EAAE,KAAK;CAErB",
+    "sources": [
+        "car.scss"
+    ],
+    "names": [],
+    "file": "car.css"
+}

@@ -9,6 +9,7 @@ import FoodCategories from './components/FoodCategories';
 import Chefs from './components/Chefs';
 import FoodExamples from './components/FoodExamples';
 import Managment from './components/Mangament';
+import Name from './components/Name';
 class App extends React.Component {
   constructor(props){super()}
   render(){
@@ -19,6 +20,7 @@ class App extends React.Component {
       <Chefs/>
     <FoodExamples/>
     <Managment/>
+    <Name/>
     </div>
   
     )}
