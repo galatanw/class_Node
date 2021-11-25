@@ -8,15 +8,25 @@
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
 }
+@mixin background-color ($color){
+    background-color: $color;
+    -ms-background-color: $color;
+    -webkit-background-color: $color;
+    -moz-background-color: $color;
+}
 .titles{
     font-weight: 900;
     color: rgb(31, 25, 25);
     font-family: serif;
-
 }
 img{
     @extend .image;
 }
-h1 h4{
-    @extend .titles
+h1, h4{
+    @extend .titles;
+}
+article{
+    @extend .image;
+    @include border-radius(40px);
+    @include background-color(red);    
 }
