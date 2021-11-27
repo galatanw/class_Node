@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 
-export default class TodoList extends Component {
-    render() {
-        const deleteMe = this.props.deleteMe
-        const task = this.props.task
-        const status = this.props.status
+export default function TodoList(props) {
+        const deleteMe = props.deletee
+        const task = props.tasks.task
+        const status = props.tasks.status.toString()
         return (
-                <tr>
-                    <td>{task} </td>
-                    <td>{status}</td>
-                    <td>< input disabled={deleteMe} type="checkbox" id={this.props.key} /></td>
-                </tr>
+            <>
+                <td><  input onClick={props.update}  type="button" id={props.loc} /></td>
+                <td>{task} </td>
+                <td>{status}</td>
+                <td><  input onClick={props.deleter} disabled={deleteMe} type="checkbox" id={props.loc} /></td>
+            </>
         )
-    }
 }

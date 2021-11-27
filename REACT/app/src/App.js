@@ -1,9 +1,9 @@
 import './App.css';
-import TodoList from './components/TodoList/TodoList';
+import TodolistWrapper from './components/TodoList/TodolistWrapper';
 function App() {
   return (
     <div className="App">
-      <TodoList/>
+    <TodolistWrapper/>
     </div>
   );
 }
