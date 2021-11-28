@@ -1,5 +1,3 @@
-import React, { Component } from 'react'
-
 export default function TodoList(props) {
         const disbaleDelete = props.disbaleDelete
         const task = props.tasks.task

@@ -1,11 +1,14 @@
+import { Component } from 'react';
 import './App.css';
-import TodolistWrapper from './components/TodoList/TodolistWrapper';
-function App() {
+import TodolistWrapper from "./components/TodoList/TodolistWrapper"
+class App extends Component {
+  render(){
   return (
     <div className="App">
-    <TodolistWrapper/>
-    </div>
+      <TodolistWrapper/>
+    </div> 
   );
+}
 }
 
 export default App;

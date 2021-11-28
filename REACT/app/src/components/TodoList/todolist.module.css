@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.wrapper button{
+    border-radius: 40px;
+}
+
+.table{
+    border: 4px solid black;    
+    overflow-y: scroll;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+.table thead th{
+background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+}
+.table tbody td{
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding: 10px;
+}
+.table tbody input[type=button] {
+    border-radius: 50px;
+}
+.table tbody input[type=checkbox] {
+    height: 4vw;
+    width: 3vh;
+  background-color: #eee;
+}
+.table tfoot td:first-child{
+color: yellow;
+font-weight: 900;
+}
+.table tfoot td:nth-child(2){
+    color: green;
+    font-weight: 900;
+    }
+    .table tfoot td{
+        background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+    }
