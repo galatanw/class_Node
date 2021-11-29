@@ -6,12 +6,12 @@ export default function TodoList(props) {
         const status = props.tasks.status.toString()
         return (
             <>
-                <td><input onClick={props.update}   type="button" id={props.loc} value="UPDATE" /></td>
                 <td>{task} </td>
                 <td>{status}</td>
+                <td><input onClick={props.update}   type="button" id={props.loc} value="UPDATE" /></td>
                 {
-                 props.selectAll?
-                <td><input onClick={props.deleter}  disabled={disbaleDelete} type="checkbox" id={props.loc}  checked={true} /></td>:
+                        props.selectAll?
+                        <td><input onClick={props.deleter}  disabled={disbaleDelete} type="checkbox" id={props.loc}  checked={true} /></td>:
                 <td><input onClick={props.deleter}  disabled={disbaleDelete} type="checkbox" id={props.loc} /></td>
                 }
                 </>

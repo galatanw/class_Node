@@ -11,35 +11,63 @@
 
 .table{
     border: 4px solid black;    
-    overflow-y: scroll;
-    max-height: 50vh;
-    overflow-y: scroll;
+    width: 100%;
 }
-.table thead th{
+.tableHead {
+    position: fixed;
+    top: 0;
+width: 100%;
 background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
  background-blend-mode: multiply,multiply;
 }
-.table tbody td{
-    font-family: 'PT Sans Narrow', sans-serif;
-    padding: 10px;
+.tableBody{
+    width: 100%;
+    position: relative;
+    top: 10vh;
 }
-.table tbody input[type=button] {
+.tableBody table{
+    width: 100%;
+}
+.tableBody tbody td:first-child{
+    width: 24%;
+    /* border-right: 100px solid red; */
+}
+.tableBody tbody td:nth-child(2){
+    width: 22%;
+}
+.tableBody tbody td:nth-child(3){
+    width: 20%;
+}
+
+.tableBody td{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: xx-large;
+}
+.tableBody input[type=button] {
     border-radius: 50px;
 }
-.table tbody input[type=checkbox] {
+.tableBody input[type=checkbox] {
     height: 4vw;
     width: 3vh;
   background-color: #eee;
 }
-.table tfoot td:first-child{
+
+.tableFoot td:first-child{
 color: yellow;
 font-weight: 900;
 }
-.table tfoot td:nth-child(2){
+
+.tableFoot td:nth-child(2){
     color: green;
     font-weight: 900;
     }
-    .table tfoot td{
+    .tableFoot{
+    position: fixed;
+    bottom: 0;
         background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
  background-blend-mode: multiply,multiply;
-    }
+ width: 100%;
+}
+.tableFoot table{
+width: 100%;
+}
