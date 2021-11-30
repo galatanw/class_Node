@@ -1,0 +1,60 @@
+.tHead{
+width: 100%;
+position: sticky;
+top: 0;
+height: 4vh;
+background-color:red ;
+z-index: 100;
+background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.tBody{
+    position: relative;
+    top: 4vh;
+}
+.tHead table{
+    position:sticky;
+    color: white;
+    font-weight: 500;
+    top: 4vh;
+}
+.tHead table,.tBody table{
+    width: 100%;
+}
+.tBody td:nth-child(1),.tHead td:nth-child(1){
+    width: 2%;
+}
+.tBody td:nth-child(2),.tHead td:nth-child(2){
+    width: 25%;
+}
+.tBody td:nth-child(3),.tHead td:nth-child(3){
+    width: 65%;
+}
+.tHead td {
+border: 1px solid black;
+}
+
+    
+.tBody td , .tBody table{
+border: 1px solid black;
+}
+.tFoot {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    background-color: red;
+}
+.tFoot form textarea{
+ margin-right: 3vw;
+}
+.tFoot form input[type=submit]{
+    position: absolute;
+    top: 30%;
+    height: 40%;
+    border-radius: 50%;
+    border-style:ridge;
+    box-shadow: 3px 3px 3px white;
+}
