@@ -8,6 +8,9 @@ export default class Game extends Component {
     localStorageData = [];
     displayGame = false;
     stop = "notStarted"
+    
+    
+    
     componentDidMount() {
         const data = JSON.parse(localStorage.getItem("history"))
         for (const key in data) {
@@ -73,15 +76,6 @@ this.setState({ fineAlert: "" })
 }
 }
 
-
-
-
-
-
-
-
-
-
     startGame = (e) => {
         this.setState({scoreDisplay:false})
         const time = new Date().getTime()
@@ -91,6 +85,7 @@ this.setState({ fineAlert: "" })
             this.setState({ end: end })}, 500)
         e.target.style.display = "none"
     }
+
     scoreDisplay=(e)=>{
         if (typeof this.stop=="string"){
             this.state.scoreDisplay===false?e.target.innerText="Hide":e.target.innerText="scores Board"
