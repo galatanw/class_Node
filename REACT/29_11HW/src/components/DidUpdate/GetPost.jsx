@@ -10,7 +10,7 @@ export default class GetById extends Component {
         })
     }
     componentDidUpdate(prevProps){
-        if(prevProps.id!==this.props.id&&0<Number(this.props.id)<=100){
+        if(prevProps.id!==this.props.id&&0<Number(this.props.id)&&Number(this.props.id)<=100){
             fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.id}`, { method: "GET" })
             .then(res=>res.json())
             .then(data=>{

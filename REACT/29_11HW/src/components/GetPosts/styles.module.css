@@ -38,14 +38,14 @@ border: 1px solid black;
 border: 1px solid black;
 }
 .tFoot {
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-image: linear-gradient(to top, #09203f71 0%, #53789585 100%);
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     position: sticky;
     bottom: 0;
     z-index: 100;
-    background-color: red;
+    margin-top: 5vh;
 }
 .tFoot form textarea{
  margin-right: 3vw;

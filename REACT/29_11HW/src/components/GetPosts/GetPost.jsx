@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PostRow from "./PostRow"
 import * as styles from "./styles.module.css"
 export default class GetPost extends Component {
-    state = { allPost: [], PostToUpdate: {id:null, body:"body",title:"title"} }
+    state = { allPost: [], id: null, title: "", body: "" }
     componentDidMount() {
         console.log('!');
         fetch("https://jsonplaceholder.typicode.com/posts", { method: "GET" })
@@ -12,48 +12,57 @@ export default class GetPost extends Component {
             })
             .catch(err => console.log(err))
     }
-    Update=(e)=>{
+    Update = (e) => {
         e.preventDefault()
-        const form=e.target
-        let temp=[...this.state.allPost]
-        let newPost={id:this.state.PostToUpdate.id}
-        if(form.title.value.length<0)newPost.title=this.state.PostToUpdate.title
-        else newPost.title=form.title.value
-        if(form.body.value.length<0)newPost.body=this.state.PostToUpdate.body
-        else newPost.body=form.body.value
-        temp[Number(form.id)-1]=newPost
+        const form = e.target
+        let temp = [...this.state.allPost]
+        let newPost = { id: this.state.id }
+        if (form.title.value.length < 0) newPost.title = this.state.title
+        else newPost.title = form.title.value
+        if (form.body.value.length < 0) newPost.body = this.state.body
+        else newPost.body = form.body.value
+        temp[this.state.id - 1] = newPost
         this.setState({
-            allPost:temp,
-            PostToUpdate:{id:"",title:"",body:""}})
-        }
-    ToUpdate=(e)=>{
-        const index=e.target.id
-        let temp=this.state.allPost[index]
-        this.setState({PostToUpdate:temp})
+            allPost: temp,
+            id: "", 
+            title: "",
+            body: "" }
+        )
     }
-    deleteOne=(e)=>{
-        const pendingPost=e.target.id
-        const temp=this.state.allPost
-        temp.splice(pendingPost,1)
-        this.setState({allPost:temp})
+    ToUpdate = (e) => {
+        const index = e.target.id
+        let temp = this.state.allPost[index]
+        this.setState({
+        id: temp.id,
+        body: temp.body,
+        title: temp.title,
+        })
+
+        
+    }
+    deleteOne = (e) => {
+        const pendingPost = e.target.id
+        const temp = this.state.allPost
+        temp.splice(pendingPost, 1)
+        this.setState({ allPost: temp })
     }
     render() {
 
         return (
             <div className={styles.table}>
                 <div className={styles.tHead}>
-                  <table> 
-                      <thead>
-                      <tr>
-                  <td>ID</td>
-                    <td>Title</td>
-                    <td>Body</td>
-                    <td>delete</td>
-                    <td>update</td>
-                    </tr>
-                    </thead> 
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Title</td>
+                                <td>Body</td>
+                                <td>delete</td>
+                                <td>update</td>
+                            </tr>
+                        </thead>
                     </table>
-                    
+
                 </div>
                 <div className={styles.tBody}>
                     <table>
@@ -67,9 +76,9 @@ export default class GetPost extends Component {
                     </table>
                 </div>
                 <div className={styles.tFoot}>
-                    <form onSubmit={this.Update} id={this.state.PostToUpdate.id}>
-                        <textarea name="title" value={this.state.PostToUpdate.title} id="" cols="30" rows="10"></textarea>
-                        <textarea name="body" value={this.state.PostToUpdate.body} id="" cols="30" rows="10"></textarea>
+                    <form onSubmit={this.Update}>
+                        <textarea name="title" placeholder="title" value={this.state.title} cols="30" onChange={e => this.setState({ title: e.target.value })} rows="7" ></textarea>
+                        <textarea name="body" placeholder="body" cols="30" rows="7" value={this.state.body} onChange={e => this.setState({ title: e.target.value })} ></textarea>
                         <input type="submit" />
                     </form>
                 </div>
