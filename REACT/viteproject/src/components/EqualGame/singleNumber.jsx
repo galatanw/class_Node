@@ -1,6 +1,6 @@
 function SingleNumber(props) {
     
-    return <button id={props.id} onClick={props.check} disabled={props.dis}>{props.item}</button>
+    return <button id={props.id} onClick={props.onClick} disabled={props.dis}>{props.item}</button>
 
 }
 function Messages(props) {
@@ -11,7 +11,7 @@ function Messages(props) {
 }
 function Scores(props) {
     return <>
-        <button onClick={props.scoreDisplay}>scores Board</button>
+        <button onClick={props.scoreDisplay}>{props.displayScore.display==="block"?"hide":"scores Board"}</button>
         <ol style={props.displayScore} className={props.class}>
             {props.localStorageData.map((item) => item)}
         </ol>
