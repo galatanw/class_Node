@@ -5,8 +5,8 @@ function SingleNumber(props) {
 }
 function Messages(props) {
     return <>
-        <h1>{props.won}</h1>
-        <h1>{props.fineAlert}</h1>
+        <h1 style={{display:props.won ? "block" : "none"}}>Game won you took {props.end + props.fine} seconds</h1>
+        <h1 style={{display:props.fineAlert ? "block" : "none"}}>fine +1sc ,fined {props.fine }sc so far</h1>
     </>
 }
 function Scores(props) {
@@ -18,9 +18,8 @@ function Scores(props) {
     </>
 }
 
-
 export {
     SingleNumber,
     Messages,
-    Scores
+    Scores,
 }
