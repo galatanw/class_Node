@@ -1,12 +1,11 @@
 import './App.css';
 import React, { Component } from 'react'
-import {Redirect, BrowserRouter , Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter , Switch, Route, Link} from 'react-router-dom';
 import Home from './Pages/Home';
 import AddPerson from './components/Persons/AddPerson';
 import Persons from './components/Persons/Persons';
 import Details from './Pages/Details';
 export default class App extends Component{
-
   state=
   {
     persons:[],personIndex:null
