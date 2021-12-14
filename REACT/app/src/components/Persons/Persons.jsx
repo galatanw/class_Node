@@ -4,33 +4,22 @@ import {Redirect} from 'react-router-dom';
 export default class Persons extends Component {
     state={
         redirect:false,
-        persons:null,
         details:false
-
 }
-PersonsElement=<h1>no persons yet</h1>
-componentDidMount(){
-    this.showPersons()
+BooksElements=this.props.books.map((item,i)=>{
+    return <tr key={i}>
+              <td>{item.name},{item.age}</td>
+              <td onClick={(e)=>this.details(e,i)} id={i}>details</td>
+          </tr>
 }
-details=(e)=>{
-        this.props.details(e)
+)
+details=(e,i)=>{
+        this.props.details(i)
         this.setState({details:true})
 }    
-showPersons=()=>{
-if(this.props.persons.length>0){
-this.setState({persons:this.props.persons})
-return this.PersonsElement= this.props.persons.map((item,i)=>{
-        return <li key={i}>
-                  <p>{item.name},{item.age}</p>
-                  <button onClick={this.details} id={i}>details</button>
-              </li>
-}
-)}
 
-
-
-}
     render() {
+        console.log("rendered");
 if(this.state.redirect){
 return <Redirect to="/AddPersons"/>
 }
