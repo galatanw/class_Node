@@ -1,11 +1,11 @@
 import './App.css'
-import FormRef from './components/Form.jsx/form'
+import First from './components/useContext/First'
 
 function App() {
 
   return (
     <div className="App">
-      {/* <FormRef/> */}
+      <First context={"GAL"}/>
     </div>
   )
 }
