@@ -1,13 +1,10 @@
 import './App.css'
-import First from './components/useContext/First'
-
-function App() {
+import UserLvl1 from './components/useContext/User/UserLvl1'
+export default function App() {
 
   return (
     <div className="App">
-      <First context={"GAL"}/>
+      <UserLvl1/>
     </div>
   )
 }
-
-export default App
