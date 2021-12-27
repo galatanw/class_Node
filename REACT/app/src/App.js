@@ -1,16 +1,12 @@
-import { Component } from 'react';
-import './App.css';
-import FullGame from './components/Game/FullGame';
-class App extends Component {
-  
+import React from 'react'
+// import Albums from './components/CostumHooks/Album'
+import Comments from './components/CostumHooks/Comments'
 
-  render(){
-    return (
-    <div className="App">
-      <FullGame/>
-    </div> 
-  );
+export default function App() {
+  return (
+    <div>
+      {/* <Albums/> */}
+        <Comments/>
+    </div>
+  )
 }
-}
-
-export default App;
