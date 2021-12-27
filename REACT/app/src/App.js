@@ -1,12 +1,10 @@
 import React from 'react'
-// import Albums from './components/CostumHooks/Album'
-import Comments from './components/CostumHooks/Comments'
+import Paremt from './components/Performance/Paremt'
 
 export default function App() {
   return (
     <div>
-      {/* <Albums/> */}
-        <Comments/>
+      <Paremt/>
     </div>
   )
 }
