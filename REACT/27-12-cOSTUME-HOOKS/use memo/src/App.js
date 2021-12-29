@@ -1,9 +1,10 @@
 import React from 'react'
-import ExampleUseFetch from './components/exercise1/UseFetchExample'
+import Paremt from './components/Performance/Paremt'
+
 export default function App() {
   return (
     <div>
-      <ExampleUseFetch/>
+      <Paremt/>
     </div>
   )
 }
