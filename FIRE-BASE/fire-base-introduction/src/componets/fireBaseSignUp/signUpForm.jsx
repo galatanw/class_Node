@@ -1,11 +1,12 @@
 import {useEffect,useState} from 'react'
-import React from 'react'
 import asyncPostFireBase ,{validInputs}from './signUpFunction'
+
 export default function SignUpForm() {
-   const [Email, setEmail] = useState("")
+   
+    const [Email, setEmail] = useState("")
    const [Password, setPassword] = useState("")
    const [Valid, setValid] = useState(true)
-   function verify(e) {
+   function verifyInp(e) {
         const form = e.currentTarget
         const password = form.password.value
         const email = form.email.value
@@ -15,15 +16,14 @@ export default function SignUpForm() {
             return setValid(false)
         } setValid(true)
     }
-    
-    function userSignUp(e) {
+    function signUpSubmit(e) {
         e.preventDefault()
         if (!Valid)
             asyncPostFireBase({ email: Email, password: Password })
     }
     return (
         <div>
-            <form onSubmit={(e)=>userSignUp(e)} onChange={(e)=>verify(e)}>
+            <form onSubmit={(e)=>signUpSubmit(e)} onChange={(e)=>verifyInp(e)}>
                 <input type="email" name='email' />
                 <input type="password" name='password'/>
                 <input type="submit" disabled={Valid} value="register"/>
