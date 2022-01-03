@@ -9,8 +9,8 @@ const asyncPostFireBase = async (USER) => {
   const responde = request;
   console.log(responde);
  } catch (error) {
-  console.log(error);
-  console.log(error.status);
+  console.log(error.response.data.error.message);
+  
  }
 };
 export default asyncPostFireBase;
@@ -19,8 +19,10 @@ export function validInputs(email, password) {
  const emailValidation = [];
  const emailHost = email.match(/@[A-Za-z](.)/);
  if (emailHost)
+ 
   if (emailHost[0][1].match(/[a-zA-z]/)) emailValidation.push('emailHost');
  if (email.match(/@/g)?.length === 1) emailValidation.push('@');
+ if (!email.match(/^[A-za-z]/)) emailValidation.push('notValid');
  if (email.match(/.com/g)?.length === 1) emailValidation.push('.com');
  if (email.match(/.co.il/g)?.length === 1) emailValidation.push('.co.il');
  if (email.match(/.org/g)?.length === 1) emailValidation.push('.org');
